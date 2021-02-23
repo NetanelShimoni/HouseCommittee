@@ -4,34 +4,38 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class Customer implements Serializable {
-    private String Fname;
-    private String Lname;
+    private String fname;
+    private String lname;
     private String id;
     private String email;
-    private String  Apartment_number;
-    private ArrayList  <Integer> Monthly_amount;
+    private String  apartment_number;
+    private ArrayList  <Integer> monthly_amount;
 
-    public Customer(String fname, String lname, String id, String email, String apartment_number) {
-      this.Fname = fname;
-        this.Lname = lname;
+    public Customer(){
+
+    }
+
+    public Customer(String apartment_number,String fname,String lname, ArrayList<Integer> monthString, String id, String email) {
+      this.fname = fname;
+        this.lname = lname;
         this.id = id;
         this.email = email;
-        this.Apartment_number = apartment_number;
-        this.Monthly_amount  =  new ArrayList();
+        this.apartment_number = apartment_number;
+        this.monthly_amount  =  new ArrayList();
         for (int i = 0; i <12 ; i++) {
-           this.Monthly_amount.add(6);
+           this.monthly_amount.add(6);
         }
     }
 
     @Override
     public String toString() {
         return "Customer{" +
-                "Fname='" + Fname + '\'' +
-                ", Lname='" + Lname + '\'' +
+                "Fname='" + fname + '\'' +
+                ", Lname='" + lname + '\'' +
                 ", id='" + id + '\'' +
                 ", email='" + email + '\'' +
-                ", Apartment_number='" + Apartment_number + '\'' +
-                ", Monthly_amount=" + Monthly_amount +
+                ", Apartment_number='" + apartment_number + '\'' +
+                ", Monthly_amount=" + monthly_amount +
                 '}';
     }
 
@@ -44,19 +48,19 @@ public class Customer implements Serializable {
     }
 
     public String getFname() {
-        return Fname;
+        return fname;
     }
 
     public void setFname(String fname) {
-        Fname = fname;
+        fname = fname;
     }
 
     public String getLname() {
-        return Lname;
+        return lname;
     }
 
     public void setLname(String lname) {
-        Lname = lname;
+        lname = lname;
     }
 
     public String getId() {
@@ -68,18 +72,18 @@ public class Customer implements Serializable {
     }
 
     public String getApartment_number() {
-        return Apartment_number;
+        return apartment_number;
     }
 
     public void setApartment_number(String apartment_number) {
-        Apartment_number = apartment_number;
+        apartment_number = apartment_number;
     }
 
     public ArrayList<Integer> getMonthly_amount() {
-        return Monthly_amount;
+        return monthly_amount;
     }
 
     public void setMonthly_amount(ArrayList<Integer> monthly_amount) {
-        Monthly_amount = monthly_amount;
+        monthly_amount = monthly_amount;
     }
 }
