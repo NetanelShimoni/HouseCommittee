@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/logo"
+    tools:context=".HouseCommittee_Home">
+
+    <Button
+        android:id="@+id/bt_All_payments_in_the_building"
+        android:layout_width="303dp"
+        android:layout_height="73dp"
+        android:text="	הצג פרוט של כלל התשלומים בבניין "
+        app:backgroundTint="#452323"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.384" />
+
+    <Button
+        android:id="@+id/bt_Update_tenant_payments"
+        android:layout_width="303dp"
+        android:layout_height="73dp"
+        android:text="	עדכן תשלום לדייר"
+        app:backgroundTint="#452323"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.583" />
+
+    <Button
+        android:id="@+id/bt_Introduce_monthly_building_income"
+        android:layout_width="303dp"
+        android:layout_height="73dp"
+        android:text="	הצגת הכנסה חודשית לבניין "
+        app:backgroundTint="#452323"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.761" />
+
+    <Button
+        android:id="@+id/bt_Details_of_tenant_payments"
+        android:layout_width="303dp"
+        android:layout_height="73dp"
+        android:text="הצג פירוט תשלומים של דייר"
+        app:backgroundTint="#452323"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.188" />
+</androidx.constraintlayout.widget.ConstraintLayout>
