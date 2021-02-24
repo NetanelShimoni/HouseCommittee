@@ -45,8 +45,9 @@ public class register_Customer extends AppCompatActivity {
                 NamApartment=edNamApartment.getText().toString();
                 id=edId.getText().toString();
                 String id_s = DbRef.push().getKey();
-                customer = new Customer(NamApartment,Fname,Lname,null,id,Email); // get the HouseCommittee
-                DbRef.child(id_s).setValue(customer);// insert the HouseCommittee on firebase
+                customer = new Customer(Fname,Lname,id,Email,Password,NamApartment); // get the Customer
+                
+                DbRef.child(id).setValue(customer);// insert the HouseCommittee on firebase
                 Intent i = new Intent(register_Customer.this, Login.class);
                 startActivity(i);
             }

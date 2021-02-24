@@ -8,16 +8,16 @@
     tools:context=".HouseCommittee_Home">
 
     <Button
-        android:id="@+id/bt_All_payments_in_the_building"
+        android:id="@+id/bt_Details_of_tenant_payments"
         android:layout_width="303dp"
         android:layout_height="73dp"
-        android:text="	הצג פרוט של כלל התשלומים בבניין "
+        android:text="הצג פירוט תשלומים של דייר"
         app:backgroundTint="#452323"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.384" />
+        app:layout_constraintVertical_bias="0.255" />
 
     <Button
         android:id="@+id/bt_Update_tenant_payments"
@@ -29,7 +29,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.583" />
+        app:layout_constraintVertical_bias="0.65" />
 
     <Button
         android:id="@+id/bt_Introduce_monthly_building_income"
@@ -41,17 +41,30 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.761" />
+        app:layout_constraintVertical_bias="0.828" />
 
     <Button
-        android:id="@+id/bt_Details_of_tenant_payments"
+        android:id="@+id/bt_All_payments_in_the_building"
         android:layout_width="303dp"
         android:layout_height="73dp"
-        android:text="הצג פירוט תשלומים של דייר"
+        android:text="	הצג פרוט של כלל התשלומים בבניין "
         app:backgroundTint="#452323"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.188" />
+        app:layout_constraintVertical_bias="0.451" />
+
+    <TextView
+        android:id="@+id/textView_welcome"
+        android:layout_width="317dp"
+        android:layout_height="105dp"
+        android:textColor="#953535"
+        android:textSize="36sp"
+        android:textStyle="normal|bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.038" />
 </androidx.constraintlayout.widget.ConstraintLayout>

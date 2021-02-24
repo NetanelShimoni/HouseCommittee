@@ -47,7 +47,7 @@ public class register_HouseCommittee extends AppCompatActivity {
                 id=edId.getText().toString();
                 String id_s = DbRef.push().getKey();
                 houseCommittee = new HouseCommittee(Fname,Lname,id,Password,Yours,Email); // get the HouseCommittee
-                DbRef.child(id_s).setValue(houseCommittee);// insert the HouseCommittee on firebase
+                DbRef.child(id).setValue(houseCommittee);// insert the HouseCommittee on firebase
                 Intent i = new Intent(register_HouseCommittee.this, Login.class);
                 startActivity(i);
             }

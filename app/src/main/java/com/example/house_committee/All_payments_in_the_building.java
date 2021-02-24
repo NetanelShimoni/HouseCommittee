@@ -3,6 +3,7 @@ package com.example.house_committee;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -21,11 +22,15 @@ public class All_payments_in_the_building extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Intent i = getIntent();
+        String ans =i.getStringExtra("all_details");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_payments_in_the_building);
 
         textViewpay = findViewById(R.id.textViewpay);
         all_payments = findViewById(R.id.all_payments);
+
+        all_payments.setText(ans);
 
 
     }

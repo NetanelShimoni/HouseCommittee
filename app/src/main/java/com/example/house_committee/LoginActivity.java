@@ -9,6 +9,8 @@ import android.widget.Button;
 
 public class LoginActivity extends AppCompatActivity {
     private Button connect , choose_new_password;
+    private boolean flag ; // check is it customer or HouseCommittee
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,7 +20,6 @@ public class LoginActivity extends AppCompatActivity {
         connect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                boolean flag ;
                 Intent i = getIntent();
                 flag= (boolean)i.getBooleanExtra("who_is_it",false);
                 Intent intent = new Intent(LoginActivity.this,Login.class);
@@ -26,6 +27,15 @@ public class LoginActivity extends AppCompatActivity {
                 System.out.println("flag is:" +flag);
                 startActivity(intent);
 
+            }
+        });
+        choose_new_password.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this,Change_Password.class);
+                intent.putExtra("who_is_it",flag);
+                System.out.println("flag is:" +flag);
+                startActivity(intent);
             }
         });
     }

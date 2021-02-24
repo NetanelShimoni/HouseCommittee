@@ -3,22 +3,22 @@ package com.example.house_committee;
 import java.io.Serializable;
 
 public class HouseCommittee implements Serializable {
-    private String Fname;
-    private String Lname;
+    private String fname;
+    private String lname;
     private String id;
     private String password;
     private String Years_of_seniority;
     private String email;
 
-
     public HouseCommittee(String fname, String lname, String id, String password, String years_of_seniority, String email) {
-        this.Fname = fname;
-        this.Lname = lname;
+        this.fname = fname;
+        this.lname = lname;
         this.id = id;
         this.password = password;
-        this.Years_of_seniority = years_of_seniority;
+        Years_of_seniority = years_of_seniority;
         this.email = email;
     }
+
     public String getPassword() {
         return password;
     }
@@ -36,19 +36,19 @@ public class HouseCommittee implements Serializable {
     }
 
     public String getFname() {
-        return Fname;
+        return fname;
     }
 
     public void setFname(String fname) {
-        Fname = fname;
+        this.fname = fname;
     }
 
     public String getLname() {
-        return Lname;
+        return lname;
     }
 
     public void setLname(String lname) {
-        Lname = lname;
+        this.lname = lname;
     }
 
     public String getId() {

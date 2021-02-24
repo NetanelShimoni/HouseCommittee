@@ -8,6 +8,7 @@ public class Customer implements Serializable {
     private String lname;
     private String id;
     private String email;
+    private String password;
     private String  apartment_number;
     private ArrayList  <Integer> monthly_amount;
 
@@ -15,18 +16,28 @@ public class Customer implements Serializable {
 
     }
 
-    public Customer(String apartment_number,String fname,String lname, ArrayList<Integer> monthString, String id, String email) {
-      this.fname = fname;
+
+
+    public Customer(String fname, String lname, String id, String email, String password, String apartment_number) {
+        this.fname = fname;
         this.lname = lname;
         this.id = id;
         this.email = email;
+        this.password = password;
         this.apartment_number = apartment_number;
-        this.monthly_amount  =  new ArrayList();
+        this.monthly_amount = new ArrayList<Integer>();
         for (int i = 0; i <12 ; i++) {
-           this.monthly_amount.add(6);
+            this.getMonthly_amount().add(0);
+
         }
     }
+    public String getPassword() {
+        return password;
+    }
 
+    public void setPassword(String password) {
+        this.password = password;
+    }
     @Override
     public String toString() {
         return "Customer{" +

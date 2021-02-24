@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/logo"
-    tools:context=".All_payments_in_the_building">
+    tools:context=".Introduce_monthly_building_income">
 
     <TextView
-        android:id="@+id/all_payments"
+        android:id="@+id/all_payments_sum"
         android:layout_width="310dp"
         android:layout_height="538dp"
         android:textSize="24sp"
@@ -20,10 +20,10 @@
         app:layout_constraintVertical_bias="0.735" />
 
     <TextView
-        android:id="@+id/textViewpay"
+        android:id="@+id/tv_allpay"
         android:layout_width="332dp"
         android:layout_height="85dp"
-        android:text="פרטי תשלום של כלל הדיירים"
+        android:text="סך התשלומים לפי כל חודש"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

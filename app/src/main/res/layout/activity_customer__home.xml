@@ -5,30 +5,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/logo"
-    tools:context=".All_payments_in_the_building">
+    tools:context=".Customer_Home">
 
     <TextView
-        android:id="@+id/all_payments"
-        android:layout_width="310dp"
-        android:layout_height="538dp"
+        android:id="@+id/textView_detaiels"
+        android:layout_width="365dp"
+        android:layout_height="422dp"
+        android:textSize="30sp"
+        android:textStyle="normal|bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="339dp"
+        android:layout_height="76dp"
+        android:text="תשלומים  עבור חודש שבוצעו בשנה זו"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.638"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.735" />
-
-    <TextView
-        android:id="@+id/textViewpay"
-        android:layout_width="332dp"
-        android:layout_height="85dp"
-        android:text="פרטי תשלום של כלל הדיירים"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.372"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.045" />
+        app:layout_constraintVertical_bias="0.071" />
 </androidx.constraintlayout.widget.ConstraintLayout>

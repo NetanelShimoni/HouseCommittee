@@ -55,38 +55,35 @@ public class Login extends AppCompatActivity {
                 }
             }
         });
-//Checks if a logged in user is a tenant (Customer)
+
+
+        //Checks if a logged in user is a house committee or customer
         btlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 email = ED_email.getText().toString();
                 password = ED_password.getText().toString();
-            CustomerDbRef.addValueEventListener(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    for (DataSnapshot ds : snapshot.getChildren()) {
-                        if (ds.child("email").getValue().equals(email) && ds.child("password").getValue().equals(password)) //Verify the data
-                        {
-                            Object object = ds.getValue(Object.class); // parsing to object Customer
-                            String json = new Gson().toJson(object);
-                            Customer user = new Gson().fromJson(json, Customer.class);
+                                CustomerDbRef.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        for (DataSnapshot ds : snapshot.getChildren()) {
+                            if (ds.child("email").getValue().equals(email) && ds.child("password").getValue().equals(password)) //Verify the data
+                            {
+                                Object object = ds.getValue(Object.class); // parsing to object Customer
+                                String json = new Gson().toJson(object);
+                                Customer user = new Gson().fromJson(json, Customer.class);
+                                Toast.makeText(Login.this, "OK!!!", Toast.LENGTH_LONG).show();
+                                Intent i = new Intent(Login.this, Customer_Home.class);
+                                i.putExtra("name", user);
+                                startActivity(i);
+                            }
                         }
                     }
-                }
-                @Override
-                public void onCancelled(@NonNull DatabaseError error) {
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
 
-                }
-            });
-            }
-        });
-
-        //Checks if a logged in user is a house committee
-        btlogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                email = ED_email.getText().toString();
-                password = ED_password.getText().toString();
+                    }
+                });
                 HouseDbRef.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -110,6 +107,37 @@ public class Login extends AppCompatActivity {
                 });
             }
         });
+//        //Checks if a logged in user is a tenant (Customer)
+//        btlogin.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                System.out.println("hhii i am here!!!");
+//                email = ED_email.getText().toString();
+//                password = ED_password.getText().toString();
+//                System.out.println("pass is: "+ password+ " email is : "+email);
+//                CustomerDbRef.addValueEventListener(new ValueEventListener() {
+//                    @Override
+//                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                        for (DataSnapshot ds : snapshot.getChildren()) {
+//                            if (ds.child("email").getValue().equals(email) && ds.child("password").getValue().equals(password)) //Verify the data
+//                            {
+//                                Object object = ds.getValue(Object.class); // parsing to object Customer
+//                                String json = new Gson().toJson(object);
+//                                Customer user = new Gson().fromJson(json, Customer.class);
+//                                Toast.makeText(Login.this, "OK!!!", Toast.LENGTH_LONG).show();
+//                                Intent i = new Intent(Login.this, Customer_Home.class);
+//                                i.putExtra("name", user);
+//                                startActivity(i);
+//                            }
+//                        }
+//                    }
+//                    @Override
+//                    public void onCancelled(@NonNull DatabaseError error) {
+//
+//                    }
+//                });
+//            }
+//        });
 
     }
 

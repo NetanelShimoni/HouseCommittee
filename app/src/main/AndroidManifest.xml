@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.House_Committee">
-        <activity android:name=".All_payments_in_the_building"></activity>
+        <activity android:name=".Customer_Home"></activity>
+        <activity android:name=".Change_Password" />
+        <activity android:name=".Introduce_monthly_building_income" />
+        <activity android:name=".Update_tenant_payments" />
+        <activity android:name=".All_payments_in_the_building" />
         <activity android:name=".Details_of_tenant_payments" />
         <activity android:name=".register_Customer" />
         <activity android:name=".register_HouseCommittee" />
